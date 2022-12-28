@@ -10,6 +10,11 @@ Telegram  : https://t.me/ppphp
 */
 class A
 {
+private:
+    string name;
+    int age;
+    int grade;
+
 public:
     int speed;
     int model;
@@ -21,15 +26,28 @@ public:
         cout << " The Car Color Is " << color << endl;
         cout << " The Car Model Is " << model << endl;
     }
+    void print()
+    {
+        cout << " Name is " << name << endl;
+        cout << " Age is  " << age << endl;
+        cout << " grade is " << grade << endl;
+    }
+    void set(string n, int a, int g)
+    {
+        name = n;
+        age = a;
+        grade = g;
+
+    }
 };
-class B:public A
+class B :public A
 {
     void Informations()
     {
         cout << " The Car Model Is " << model << endl;
-}
+    }
 };
-class C :public B 
+class C :public B
 {
 
 };
@@ -40,7 +58,8 @@ int main()
     x.model = 2005;
     x.speed = 240;
     x.A::Informations(); // genetics ambiguity [A]
-  
+    x.set("BruceLee13", 29, 100);
+    x.print();
 
 }
 
