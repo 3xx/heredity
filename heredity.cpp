@@ -24,7 +24,10 @@ public:
 };
 class B:public A
 {
-
+    void Informations()
+    {
+        cout << " The Car Model Is " << model << endl;
+}
 };
 class C :public B 
 {
@@ -36,7 +39,8 @@ int main()
     x.color = "Red";
     x.model = 2005;
     x.speed = 240;
-    x.Informations();
+    x.A::Informations(); // genetics ambiguity [A]
+  
 
 }
 
