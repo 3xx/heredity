@@ -2,12 +2,7 @@
 #include <iostream>
 using namespace std;
 
-/*
-Developer : BruceLee13
-Github    : https://github.com/3xx
-Telegram  : https://t.me/ppphp
 
-*/
 class A
 {
 private:
